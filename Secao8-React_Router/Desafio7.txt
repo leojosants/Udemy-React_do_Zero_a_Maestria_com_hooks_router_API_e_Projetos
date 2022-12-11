@@ -1,0 +1,12 @@
+
+Desafio 7
+
+[x] 1 - Crie um novo projeto para esta unidade:  npx create-react-app router;
+
+[x] 2 - Instale o módulo do React Route neste projeto: npm install react-router-dom
+
+[x] 3 - Instale também o json-server: npm i json-server
+
+[x] 4 - Coloque pelo menos três produtos da seção anterior no seu arquivo de db.json;
+
+[x] 5 - Crie um script para inicializar o json-server: "server": "json-server --watch data/db.json"

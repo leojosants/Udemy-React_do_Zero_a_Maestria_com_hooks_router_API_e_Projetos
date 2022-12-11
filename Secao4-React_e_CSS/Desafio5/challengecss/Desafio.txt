@@ -1,0 +1,10 @@
+
+[ok] 1 - Crie um novo projeto chamado challengecss;
+
+[ok] 2 - No CSS global zere a margin, padding e coloque uma fonte que você goste;
+
+[ok] 3 - Crie um componente que exiba detalhe de carros, este componente deve ser estilizado com scoped;
+
+[ok] 4 - Exiba pelo menos 3 carros;
+
+[] 5 - Coloque um título em App.js para o seu projeto, estilize com o App.css;

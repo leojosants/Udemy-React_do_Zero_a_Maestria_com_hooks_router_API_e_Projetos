@@ -1,0 +1,10 @@
+
+Desafio 8
+
+[x] 1 - Crie umnovo projeto para trabalharmos com CONTEXT: npx create-react-app context
+
+[x] 2 - Este projeto deve ser instalado o REACT ROUTER: npm install react-router-dom
+
+[x] 3 - Crie 3 páginas:
+
+[x] 4 - Faça uma NAVBAR e coloque o link para as 3:
