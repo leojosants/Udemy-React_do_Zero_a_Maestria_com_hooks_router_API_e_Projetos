@@ -1,8 +1,12 @@
+
 // CSS
 import './Navbar.css';
 
 // Components
-import { NavLink, Link } from 'react-router-dom';
+import {
+    NavLink,
+    Link
+} from 'react-router-dom';
 
 // Icons
 import {
@@ -15,17 +19,22 @@ import {
 // Hooks
 import { useState } from 'react';
 import { useAuth } from '../../hooks/useAuth'
-import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import {
+    useDispatch,
+    useSelector
+} from 'react-redux';
 
 // Redux
-import { logout, reset } from '../../slices/authSlice'
+import {
+    logout,
+    reset
+} from '../../slices/authSlice'
 
-
+// 
 const Navbar = () => {
 
     const { auth } = useAuth();
-
     const { user } = useSelector((state) => state.auth);
 
     const [query, setQuery] = useState('');
@@ -34,6 +43,7 @@ const Navbar = () => {
 
     const dispatch = useDispatch();
 
+    // 
     const handleLogout = () => {
 
         dispatch(logout());
@@ -43,6 +53,7 @@ const Navbar = () => {
 
     };
 
+    // 
     const handleSearch = (e) => {
 
         e.preventDefault();
@@ -53,7 +64,7 @@ const Navbar = () => {
 
     };
 
-
+    // 
     return (
 
         <nav id='nav'>

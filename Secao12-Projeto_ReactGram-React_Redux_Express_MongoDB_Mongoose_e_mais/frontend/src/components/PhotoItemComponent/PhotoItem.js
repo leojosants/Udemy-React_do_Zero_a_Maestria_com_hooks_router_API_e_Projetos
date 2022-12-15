@@ -5,11 +5,13 @@ import './PhotoItem.css';
 // Config
 import { uploads } from '../../utils/config';
 
+// Router
 import { Link } from 'react-router-dom';
 
-
+// 
 const PhotoItem = ({ photo }) => {
 
+    // 
     return (
 
         <div className='photo_item'>

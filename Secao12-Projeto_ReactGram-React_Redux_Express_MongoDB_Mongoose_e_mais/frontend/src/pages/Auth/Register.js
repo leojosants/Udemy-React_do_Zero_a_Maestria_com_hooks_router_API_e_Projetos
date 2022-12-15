@@ -1,8 +1,11 @@
+
 // CSS
 import './Auth.css'
 
-// Components
+// Router
 import { Link } from 'react-router-dom';
+
+// Components
 import Message from '../../components/MessageComponent/Message';
 
 // Hooks
@@ -12,6 +15,7 @@ import { useSelector, useDispatch } from 'react-redux';
 // Redux
 import { register, reset } from '../../slices/authSlice';
 
+// 
 const Register = () => {
 
     const [name, setName] = useState('');
@@ -23,6 +27,7 @@ const Register = () => {
 
     const { loading, error } = useSelector((state) => state.auth);
 
+    // 
     const handleSubmit = (e) => {
 
         e.preventDefault();
@@ -45,7 +50,7 @@ const Register = () => {
         dispatch(reset());
     }, [dispatch]);
 
-
+    // 
     return (
 
         <div id='register'>

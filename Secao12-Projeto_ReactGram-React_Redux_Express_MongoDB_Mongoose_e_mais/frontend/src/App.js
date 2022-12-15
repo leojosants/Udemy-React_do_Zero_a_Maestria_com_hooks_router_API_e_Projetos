@@ -26,7 +26,7 @@ import Search from './pages/Search/Search';
 import Navbar from './components/NavbarComponent/Navbar';
 import Footer from './components/FooterComponent/Footer';
 
-
+// 
 function App() {
 
   const { auth, loading } = useAuth();
@@ -35,7 +35,7 @@ function App() {
     return <p>Carregando...</p>
   }
 
-
+  // 
   return (
 
     <div className="App">
@@ -48,40 +48,19 @@ function App() {
 
           <Routes>
 
-            <Route
-              path='/'
-              element={auth ? <Home /> : <Navigate to='/login' />}
-            />
+            <Route path='/' element={auth ? <Home /> : <Navigate to='/login' />} />
 
-            <Route
-              path='/profile'
-              element={auth ? <EditProfile /> : <Navigate to='/login' />}
-            />
+            <Route path='/profile' element={auth ? <EditProfile /> : <Navigate to='/login' />} />
 
-            <Route
-              path='/users/:id'
-              element={auth ? <Profile /> : <Navigate to='/login' />}
-            />
+            <Route path='/users/:id' element={auth ? <Profile /> : <Navigate to='/login' />} />
 
-            <Route
-              path='/login'
-              element={!auth ? <Login /> : <Navigate to='/' />}
-            />
+            <Route path='/login' element={!auth ? <Login /> : <Navigate to='/' />} />
 
-            <Route
-              path='/register'
-              element={!auth ? <Register /> : <Navigate to='/' />}
-            />
+            <Route path='/register' element={!auth ? <Register /> : <Navigate to='/' />} />
 
-            <Route
-              path='/search'
-              element={auth ? <Search /> : <Navigate to='/login' />}
-            />
+            <Route path='/search' element={auth ? <Search /> : <Navigate to='/login' />} />
 
-            <Route
-              path='/photos/:id'
-              element={auth ? <Photo /> : <Navigate to='/login' />}
-            />
+            <Route path='/photos/:id' element={auth ? <Photo /> : <Navigate to='/login' />} />
 
           </Routes>
 

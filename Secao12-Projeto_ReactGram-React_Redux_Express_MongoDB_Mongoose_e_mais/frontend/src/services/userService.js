@@ -1,6 +1,6 @@
 
+// Config
 import { api, requestConfig } from '../utils/config';
-
 
 // Get user details
 const profile = async (data, token) => {
@@ -59,6 +59,7 @@ const getUserDetails = async (id) => {
 
 };
 
+// 
 const userService = {
     profile,
     updateProfile,

@@ -1,12 +1,17 @@
+
 // 
 const User = require('../models/User');
 
+// 
 const bcrypt = require('bcryptjs');
+
+// 
 const jwt = require('jsonwebtoken');
 
 // const { default: mongoose } = require('mongoose');
 const mongoose = require('mongoose');
 
+// 
 const jwtSecret = process.env.JWT_SECRET;
 
 // gerar token
@@ -20,7 +25,7 @@ const generateToken = (id) => {
         jwtSecret,
 
         {
-            expiresIn: '7d', // logout automtico
+            expiresIn: '7d', // logout automático
         }
     );
 

@@ -1,8 +1,10 @@
 
+// Redux 
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { typeOf } from "react-is";
-import authService from "../services/authService";
 
+// Service
+import authService from "../services/authService";
 
 let user = null;
 

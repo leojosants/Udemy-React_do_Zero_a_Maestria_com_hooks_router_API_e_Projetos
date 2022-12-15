@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 // Redux
 import { searchPhotos, like } from '../../slices/photoSlice'
 
-
+// 
 const Search = () => {
 
     const query = useQuery();
@@ -45,11 +45,12 @@ const Search = () => {
 
     };
 
+    // 
     if (loading) {
         return <p>Carregando...</p>
     }
 
-
+    // 
     return (
 
         <div id='search'>
@@ -70,11 +71,8 @@ const Search = () => {
                             handleLike={handleLike}
                         />
 
-                        <Link
-                            className='btn'
-                            to={`/photos/${photo._id}`}
-                        >
-                        Ver mais
+                        <Link className='btn' to={`/photos/${photo._id}`}>
+                            Ver mais
                         </Link>
 
                     </div>

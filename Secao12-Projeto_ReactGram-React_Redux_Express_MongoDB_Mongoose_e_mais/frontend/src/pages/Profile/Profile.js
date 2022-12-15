@@ -1,4 +1,5 @@
 
+// CSS
 import './Profile.css';
 
 // Config
@@ -6,7 +7,11 @@ import { uploads } from '../../utils/config';
 
 // Components
 import Message from '../../components/MessageComponent/Message';
+
+// Router
 import { Link } from 'react-router-dom';
+
+// Icons
 import { BsFillEyeFill, BsPencilFill, BsXLg } from 'react-icons/bs';
 
 // Hooks
@@ -18,7 +23,7 @@ import { useParams } from 'react-router-dom';
 import { getUserDetails } from '../../slices/userSlice';
 import { publishPhoto, resetMessage, getUserPhotos, deletePhoto, updatePhoto } from '../../slices/photoSlice'
 
-
+// 
 const Profile = () => {
 
     const { id } = useParams();
@@ -105,8 +110,11 @@ const Profile = () => {
 
     // Show or hide forms
     const hideOrShowForms = () => {
+   
         newPhotoForm.current.classList.toggle('hide');
+   
         editPhotoForm.current.classList.toggle('hide');
+   
     };
 
     // Update a photo
@@ -138,6 +146,7 @@ const Profile = () => {
 
     };
 
+    // 
     const handleCancelEdit = () => {
         hideOrShowForms();
     };
@@ -146,7 +155,7 @@ const Profile = () => {
         return <p>Carregando...</p>
     }
 
-
+    // 
     return (
 
         <div id='profile'>
@@ -155,12 +164,7 @@ const Profile = () => {
 
                 {
                     user.profileImage && (
-
-                        <img
-                            src={`${uploads}/users/${user.profileImage}`}
-                            alt={user.name}
-                        />
-
+                        <img src={`${uploads}/users/${user.profileImage}`} alt={user.name} />
                     )
                 }
 
@@ -200,28 +204,18 @@ const Profile = () => {
 
                                     <span>Imagem:</span>
 
-                                    <input
-                                        type="file"
-                                        onChange={handleFile}
-                                    />
+                                    <input type="file" onChange={handleFile} />
 
                                 </label>
 
                                 {
                                     !loadingPhoto &&
-                                    <input
-                                        type="submit"
-                                        value="Postar"
-                                    />
+                                    <input type="submit" value="Postar" />
                                 }
 
                                 {
                                     loadingPhoto && (
-                                        <input
-                                            type="submit"
-                                            disabled
-                                            value="Aguarde..."
-                                        />
+                                        <input type="submit" disabled value="Aguarde..." />
                                     )
                                 }
 
@@ -235,12 +229,7 @@ const Profile = () => {
 
                             {
                                 editImage && (
-
-                                    <img
-                                        src={`${uploads}/photos/${editImage}`}
-                                        alt={editTitle}
-                                    />
-
+                                    <img src={`${uploads}/photos/${editImage}`} alt={editTitle} />
                                 )
                             }
 
@@ -253,15 +242,9 @@ const Profile = () => {
                                     value={editTitle || ''}
                                 />
 
-                                <input
-                                    type="submit"
-                                    value="Atualizar"
-                                />
+                                <input type="submit" value="Atualizar" />
 
-                                <button
-                                    className='cancel_btn'
-                                    onClick={handleCancelEdit}
-                                >
+                                <button className='cancel_btn'onClick={handleCancelEdit}>
                                     Cancelar a edição
                                 </button>
 
@@ -271,18 +254,12 @@ const Profile = () => {
 
                         {
                             errorPhoto &&
-                            <Message
-                                msg={errorPhoto}
-                                type='error'
-                            />
+                            <Message msg={errorPhoto}type='error'/>
                         }
 
                         {
                             messagePhoto &&
-                            <Message
-                                msg={messagePhoto}
-                                type='success'
-                            />
+                            <Message msg={messagePhoto} type='success'/>
                         }
 
                     </>
@@ -303,11 +280,7 @@ const Profile = () => {
 
                                 {
                                     photo.image && (
-
-                                        <img
-                                            src={`${uploads}/photos/${photo.image}`}
-                                            alt={photo.title}
-                                        />
+                                        <img src={`${uploads}/photos/${photo.image}`} alt={photo.title} />
                                     )
                                 }
 
@@ -316,28 +289,19 @@ const Profile = () => {
 
                                         <div className="actions">
 
-                                            <Link
-                                                to={`/photos/${photo._id}`}
-                                            >
+                                            <Link to={`/photos/${photo._id}`}>
                                                 <BsFillEyeFill />
                                             </Link>
 
-                                            <BsPencilFill
-                                                onClick={() => handleEdit(photo)}
-                                            />
+                                            <BsPencilFill onClick={() => handleEdit(photo)} />
 
-                                            <BsXLg
-                                                onClick={() => handleDelete(photo._id)}
-                                            />
+                                            <BsXLg onClick={() => handleDelete(photo._id)} />
 
                                         </div>
 
                                     ) : (
 
-                                        <Link
-                                            className='btn'
-                                            to={`/photos/${photo._id}`}
-                                        >
+                                        <Link className='btn' to={`/photos/${photo._id}`}>
                                             Ver
                                         </Link>
 

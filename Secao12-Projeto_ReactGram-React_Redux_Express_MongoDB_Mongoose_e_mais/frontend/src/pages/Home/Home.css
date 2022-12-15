@@ -5,6 +5,7 @@
     padding-top: 2em;
 }
 
+/*  */
 #home .btn {
     display: block;
     max-width: 80px;
@@ -12,10 +13,12 @@
     margin: 0.5em 0 2em 0;
 }
 
+/*  */
 .no_photos {
     text-align: center;
 }
 
+/*  */
 .no_photos a {
     color: #0094f6;
 }

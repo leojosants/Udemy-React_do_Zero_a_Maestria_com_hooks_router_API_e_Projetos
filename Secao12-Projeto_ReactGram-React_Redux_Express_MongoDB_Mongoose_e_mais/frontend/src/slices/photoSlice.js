@@ -1,6 +1,8 @@
 
+// Redux
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
+// Services
 import photoService from '../services/photoService';
 
 

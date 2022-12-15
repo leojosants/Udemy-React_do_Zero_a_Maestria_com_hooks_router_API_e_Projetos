@@ -1,6 +1,7 @@
 
 /* ARQUIVO DE REQUISIÇÃO HTTP QUE TEM HAVER COM O USUÁRIO */
 
+// Config
 import { api, requestConfig } from "../utils/config";
 
 // Register an user
@@ -55,6 +56,7 @@ const login = async (data) => {
 
 };
 
+// 
 const authService = {
     register,
     logout,

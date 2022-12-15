@@ -15,7 +15,7 @@ import { profile, resetMessage, updateProfile } from '../../slices/userSlice';
 // Components
 import Message from '../../components/MessageComponent/Message';
 
-
+// 
 const EditProfile = () => {
 
     const dispatch = useDispatch();
@@ -24,7 +24,7 @@ const EditProfile = () => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    // const [password, setPassword] = useState('');
     const [profileImage, setProfileImage] = useState('');
     const [bio, setBio] = useState('');
     const [previewImage, setPreviewImage] = useState('');
@@ -45,6 +45,7 @@ const EditProfile = () => {
 
     }, [user]);
 
+    // 
     const handleSubmit = async (e) => {
 
         e.preventDefault();
@@ -62,9 +63,9 @@ const EditProfile = () => {
             userData.bio = bio;
         }
 
-        if (password) {
-            userData.password = password;
-        }
+        // if (password) {
+            // userData.password = password;
+        // }
 
         // Build form data
         const formData = new FormData();
@@ -79,6 +80,7 @@ const EditProfile = () => {
 
     };
 
+    // 
     const handleFile = (e) => {
 
         // Image preview
@@ -91,6 +93,7 @@ const EditProfile = () => {
 
     };
 
+    // 
     return (
 
         <div id='edit_profile'>
@@ -153,7 +156,7 @@ const EditProfile = () => {
                     />
                 </label>
 
-                <label>
+                {/* <label>
                     <span>Quer alterar sua senha?</span>
 
                     <input
@@ -162,7 +165,7 @@ const EditProfile = () => {
                         onChange={(e) => setPassword(e.target.value)}
                         value={password || ''}
                     />
-                </label>
+                </label> */}
 
                 {
                     !loading &&

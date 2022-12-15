@@ -8,30 +8,36 @@ body {
   color: #fafafa;
 }
 
+/*  */
 a {
   color: #fafafa;
   text-decoration: none;
 }
 
+/*  */
 .active {
   font-weight: bold;
 }
 
+/*  */
 ul {
   list-style: none;
 }
 
+/*  */
 form {
   display: flex;
   flex-direction: column;
 }
 
+/*  */
 label {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
+/*  */
 label span {
   font-weight: bold;
   margin-bottom: .5em;
@@ -39,6 +45,7 @@ label span {
   font-size: 0.7em;
 }
 
+/*  */
 input {
   background-color: #3b3b3b;
   color: #aaa;
@@ -48,10 +55,12 @@ input {
   margin-bottom: .6em;
 }
 
+/*  */
 input::placeholder {
   color: #aaa;
 }
 
+/*  */
 .btn,
 button,
 input[type='submit'] {
@@ -66,25 +75,29 @@ input[type='submit'] {
   font-size: 1em;
 }
 
+/*  */
 input[type='submit'] {
   margin-top: 1em;
 }
 
+/*  */
 input:disabled {
   cursor: not-allowed;
   background-color: #000;
 }
 
+/*  */
 button:hover,
 input[type='submit']:hover {
   opacity: 1;
 }
 
+/*  */
 .cancel_btn {
   background-color: #ccc;
 }
 
+/*  */
 .hide {
   display: none;
 }
-

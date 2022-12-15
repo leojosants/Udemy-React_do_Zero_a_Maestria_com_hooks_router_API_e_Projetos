@@ -7,9 +7,11 @@ import { uploads } from '../../utils/config';
 
 // Components
 import Message from '../../components/MessageComponent/Message';
-import { Link } from 'react-router-dom';
 import PhotoItem from '../../components/PhotoItemComponent/PhotoItem';
 import LikeContainer from '../../components/LikeContainerComponent/LikeContainer';
+
+// Router
+import { Link } from 'react-router-dom';
 
 // Hooks
 import { useEffect, useState } from 'react';
@@ -20,7 +22,7 @@ import { useResetComponentMessage } from '../../hooks/useResetComponentMessage';
 // Redux
 import { getPhoto, like, comment } from '../../slices/photoSlice';
 
-
+// 
 const Photo = () => {
 
     const { id } = useParams();
@@ -30,9 +32,7 @@ const Photo = () => {
     const resetMessage = useResetComponentMessage(dispatch);
 
     const { user } = useSelector((state) => state.auth);
-    const {
-        photo, loading, error, message
-    } = useSelector((state) => state.photo);
+    const { photo, loading, error, message } = useSelector((state) => state.photo);
 
     const [commentText, setCommentText] = useState();
 
@@ -72,7 +72,7 @@ const Photo = () => {
         return <p>Carregando...</p>
     }
 
-
+    // 
     return (
 
         <div id='photo'>
@@ -136,12 +136,8 @@ const Photo = () => {
 
                             {
                                 photo.comments.map((comment) => (
-                                    <div
-                                        className='comment'
-                                        key={comment.comment}
-                                    >
+                                    <div className='comment' key={comment.comment}>
                                         <div className="author">
-
                                             {
                                                 comment.userImage && (
 

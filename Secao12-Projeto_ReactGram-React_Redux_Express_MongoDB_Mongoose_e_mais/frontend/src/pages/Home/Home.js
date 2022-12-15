@@ -1,9 +1,12 @@
+
 // 
 import './Home.css';
 
 // Componentes
 import LikeContainer from '../../components/LikeContainerComponent/LikeContainer';
 import PhotoItem from '../../components/PhotoItemComponent/PhotoItem';
+
+// Router
 import { Link } from 'react-router-dom';
 
 // Hooks
@@ -14,7 +17,7 @@ import { useResetComponentMessage } from '../../hooks/useResetComponentMessage'
 // Redux
 import { getPhotos, like } from '../../slices/photoSlice';
 
-
+// 
 const Home = () => {
 
     const dispatch = useDispatch();
@@ -42,7 +45,7 @@ const Home = () => {
         return <p>Carregamento...</p>
     }
 
-
+    // 
     return (
 
         <div id='home'>

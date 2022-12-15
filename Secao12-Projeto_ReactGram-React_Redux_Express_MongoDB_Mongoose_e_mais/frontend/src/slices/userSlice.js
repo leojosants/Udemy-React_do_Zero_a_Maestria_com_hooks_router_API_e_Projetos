@@ -2,9 +2,10 @@
 // Redux
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
+// Service
 import userService from '../services/userService'
 
-
+// 
 const initialState = {
 
     user: {},
@@ -71,6 +72,7 @@ export const getUserDetails = createAsyncThunk(
 
 );
 
+// 
 export const userSlice = createSlice(
     {
         name: 'user',

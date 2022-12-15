@@ -1,6 +1,6 @@
 
+// Config
 import { api, requestConfig } from '../utils/config'
-
 
 // Publish an user photo
 const publishPhoto = async (data, token) => {
@@ -173,6 +173,7 @@ const searchPhotos = async (query, token) => {
 
 };
 
+// 
 const photoService = {
     publishPhoto,
     getUserPhotos,

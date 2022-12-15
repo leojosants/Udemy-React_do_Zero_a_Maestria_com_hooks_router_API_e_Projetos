@@ -1,10 +1,12 @@
- 
+
+// 
 const mongoose = require('mongoose');
 
 // connection
 const dbUser = process.env.BD_USER;
 const dbPassword = process.env.DB_PASS;
 
+// 
 const conn = async () => {
 
     try {
