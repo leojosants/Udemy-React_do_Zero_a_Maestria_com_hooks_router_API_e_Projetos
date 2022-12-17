@@ -65,7 +65,7 @@ const Register = () => {
 
                 <input
                     type="text"
-                    placeholder='Home'
+                    placeholder='Nome'
                     onChange={(e) => setName(e.target.value)}
                     value={name || ''}
                 />

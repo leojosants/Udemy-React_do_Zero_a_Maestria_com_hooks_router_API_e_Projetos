@@ -24,7 +24,7 @@ const EditProfile = () => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
+    const [password, setPassword] = useState('');
     const [profileImage, setProfileImage] = useState('');
     const [bio, setBio] = useState('');
     const [previewImage, setPreviewImage] = useState('');
@@ -63,9 +63,9 @@ const EditProfile = () => {
             userData.bio = bio;
         }
 
-        // if (password) {
-            // userData.password = password;
-        // }
+        if (password) {
+        userData.password = password;
+        };
 
         // Build form data
         const formData = new FormData();
